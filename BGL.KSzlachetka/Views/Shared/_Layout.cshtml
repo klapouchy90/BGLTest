@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - BGL test</title>
+    <link href="~/Content/styles/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/styles/bootstrap-theme.min.css" rel="stylesheet" />
+    <link href="~/Content/Site.css" rel="stylesheet" />
+    <script src="~/Scripts/js/jquery.min.js"></script>
+    <script src="~/Scripts/js/jquery.validate.min.js"></script>
+    <script src="~/Scripts/js/jquery.validate.unobtrusive.min.js"></script>
+    <script src="~/Scripts/js/respond.min.js"></script>
+    <script src="~/Scripts/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                @Html.ActionLink("BGL test", "Search", "GitHubUser", new { area = "" }, new { @class = "navbar-brand" })
+            </div>
+        </div>
+    </div>
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - BGL test</p>
+        </footer>
+    </div>
+
+    <script src="~/Scripts/culture.js"></script>
+    @RenderSection("scripts", required: false)
+</body>
+</html>

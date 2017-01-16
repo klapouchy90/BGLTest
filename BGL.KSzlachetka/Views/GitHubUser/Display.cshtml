@@ -1,0 +1,51 @@
+﻿@model BGL.KSzlachetka.Models.GitHubUser
+
+<div class="form-horizontal">
+    <div class="form-group">
+        @Html.LabelFor(model => model.Login, new { @class = "control-label col-md-2" })
+        <div class="col-md-6">
+            <img src="@Url.Content(Model.AvatarUrl)" width="50" height="50" />
+        </div>
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(model => model.Login, new { @class = "control-label col-md-2" })
+        <div class="col-md-6">
+            @Html.DisplayFor(model => model.Login)
+        </div>
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(model => model.Name, new { @class = "control-label col-md-2" })
+        <div class="col-md-6">
+            @Html.DisplayFor(model => model.Name)
+        </div>
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(model => model.Location, new { @class = "control-label col-md-2" })
+        <div class="col-md-6">
+            @Html.DisplayFor(model => model.Location)
+        </div>
+    </div>
+    @if (Model.Repos != null)
+    {
+        <div class="form-group">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Stargazers</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @for(var i = 0; i < Model.Repos.Length; i++)
+                    {
+                        <tr>
+                            <td>@Html.DisplayFor(model => model.Repos[i].Name)</td>
+                            <td>@Html.DisplayFor(model => model.Repos[i].StargazersCount)</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    }
+    
+</div>

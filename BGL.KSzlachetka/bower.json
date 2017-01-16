@@ -1,0 +1,24 @@
+{
+  "name": "bgl.kszlachetka",
+  "authors": [
+    "Krzysztof Szlachetka"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery-validation": "^1.16.0",
+    "jquery-validation-unobtrusive": "^3.2.6",
+    "bootstrap": "^3.3.7",
+    "respond": "respond-minmax#^1.4.2"
+  }
+}
